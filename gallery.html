@@ -8,7 +8,9 @@
     <!-- Same head content as index.html -->
     <link rel="stylesheet" href="css/styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="icon" href="assets/logo/lg.png" type="image/png"> <!-- Favicon from storage -->
 </head>
 <body>
        <!-- Navigation -->
@@ -51,8 +53,8 @@
         <div class="container">
             <div class="gallery-filters">
                 <button class="filter-btn active" data-filter="all">All</button>
-                <button class="filter-btn" data-filter="wedding">Wedding</button>
-                <button class="filter-btn" data-filter="pre-wedding">Pre-Wedding</button>
+                <button id="wedding-filter-btn" class="filter-btn" data-filter="wedding">Wedding</button>
+                <button id="pre-wedding-filter-btn" class="filter-btn" data-filter="pre-wedding">Pre-Wedding</button>
                 <button class="filter-btn" data-filter="portrait">Portrait</button>
                 <button class="filter-btn" data-filter="event">Events</button>
                 <button class="filter-btn" data-filter="commercial">Commercial</button>
@@ -60,27 +62,27 @@
 
             <div class="gallery-grid">
                 <!-- Wedding Category - Initial 6 images -->
-                <div class="gallery-item wedding visible">
+                <div class="gallery-item wedding hidden">
                     <img src="assets/gallery/wedding/1.jpg" alt="Wedding Photography 1" loading="lazy">
                     <div class="gallery-overlay"></div>
                 </div>
-                <div class="gallery-item wedding visible">
+                <div class="gallery-item wedding hidden">
                     <img src="assets/gallery/wedding/2.jpg" alt="Wedding Photography 2" loading="lazy">
                     <div class="gallery-overlay"></div>
                 </div>
-                <div class="gallery-item wedding visible">
+                <div class="gallery-item wedding hidden">
                     <img src="assets/gallery/wedding/3.jpg" alt="Wedding Photography 3" loading="lazy">
                     <div class="gallery-overlay"></div>
                 </div>
-                <div class="gallery-item wedding visible">
+                <div class="gallery-item wedding hidden">
                     <img src="assets/gallery/wedding/4.jpg" alt="Wedding Photography 4" loading="lazy">
                     <div class="gallery-overlay"></div>
                 </div>
-                <div class="gallery-item wedding visible">
+                <div class="gallery-item wedding hidden">
                     <img src="assets/gallery/wedding/5.jpg" alt="Wedding Photography 5" loading="lazy">
                     <div class="gallery-overlay"></div>
                 </div>
-                <div class="gallery-item wedding visible">
+                <div class="gallery-item wedding hidden">
                     <img src="assets/gallery/wedding/6.jpg" alt="Wedding Photography 6" loading="lazy">
                     <div class="gallery-overlay"></div>
                 </div>
@@ -124,27 +126,27 @@
                 </div>
 
                 <!-- Pre-Wedding Category - Initial 6 images -->
-                <div class="gallery-item pre-wedding visible">
+                <div class="gallery-item pre-wedding hidden">
                     <img src="assets/gallery/pre-wedding/1.jpg" alt="Pre-Wedding Photography 1" loading="lazy">
                     <div class="gallery-overlay"></div>
                 </div>
-                <div class="gallery-item pre-wedding visible">
+                <div class="gallery-item pre-wedding hidden">
                     <img src="assets/gallery/pre-wedding/2.jpg" alt="Pre-Wedding Photography 2" loading="lazy">
                     <div class="gallery-overlay"></div>
                 </div>
-                <div class="gallery-item pre-wedding visible">
+                <div class="gallery-item pre-wedding hidden">
                     <img src="assets/gallery/pre-wedding/3.jpg" alt="Pre-Wedding Photography 3" loading="lazy">
                     <div class="gallery-overlay"></div>
                 </div>
-                <div class="gallery-item pre-wedding visible">
+                <div class="gallery-item pre-wedding hidden">
                     <img src="assets/gallery/pre-wedding/4.jpg" alt="Pre-Wedding Photography 4" loading="lazy">
                     <div class="gallery-overlay"></div>
                 </div>
-                <div class="gallery-item pre-wedding visible">
+                <div class="gallery-item pre-wedding hidden">
                     <img src="assets/gallery/pre-wedding/5.jpg" alt="Pre-Wedding Photography 5" loading="lazy">
                     <div class="gallery-overlay"></div>
                 </div>
-                <div class="gallery-item pre-wedding visible">
+                <div class="gallery-item pre-wedding hidden">
                     <img src="assets/gallery/pre-wedding/6.jpg" alt="Pre-Wedding Photography 6" loading="lazy">
                     <div class="gallery-overlay"></div>
                 </div>
@@ -188,27 +190,27 @@
                 </div>
 
                 <!-- Portrait Category - Initial 6 images -->
-                <div class="gallery-item portrait visible">
+                <div class="gallery-item portrait hidden">
                     <img src="assets/gallery/portrait/1.jpg" alt="Portrait Photography 1" loading="lazy">
                     <div class="gallery-overlay"></div>
                 </div>
-                <div class="gallery-item portrait visible">
+                <div class="gallery-item portrait hidden">
                     <img src="assets/gallery/portrait/2.jpg" alt="Portrait Photography 2" loading="lazy">
                     <div class="gallery-overlay"></div>
                 </div>
-                <div class="gallery-item portrait visible">
+                <div class="gallery-item portrait hidden">
                     <img src="assets/gallery/portrait/3.jpg" alt="Portrait Photography 3" loading="lazy">
                     <div class="gallery-overlay"></div>
                 </div>
-                <div class="gallery-item portrait visible">
+                <div class="gallery-item portrait hidden">
                     <img src="assets/gallery/portrait/4.jpg" alt="Portrait Photography 4" loading="lazy">
                     <div class="gallery-overlay"></div>
                 </div>
-                <div class="gallery-item portrait visible">
+                <div class="gallery-item portrait hidden">
                     <img src="assets/gallery/portrait/5.jpg" alt="Portrait Photography 5" loading="lazy">
                     <div class="gallery-overlay"></div>
                 </div>
-                <div class="gallery-item portrait visible">
+                <div class="gallery-item portrait hidden">
                     <img src="assets/gallery/portrait/6.jpg" alt="Portrait Photography 6" loading="lazy">
                     <div class="gallery-overlay"></div>
                 </div>
@@ -252,91 +254,91 @@
                 </div>
 
                 <!-- Event Images - Initial 6 images -->
-                <div class="gallery-item events visible">
+                <div class="gallery-item event hidden">
                     <img src="assets/gallery/events/1.jpg" alt="Event Photography 1" loading="lazy">
                     <div class="gallery-overlay"></div>
                 </div>
-                <div class="gallery-item events visible">
+                <div class="gallery-item event hidden">
                     <img src="assets/gallery/events/2.jpg" alt="Event Photography 2" loading="lazy">
                     <div class="gallery-overlay"></div>
                 </div>
-                <div class="gallery-item events visible">
+                <div class="gallery-item event hidden">
                     <img src="assets/gallery/events/3.jpg" alt="Event Photography 3" loading="lazy">
                     <div class="gallery-overlay"></div>
                 </div>
-                <div class="gallery-item events visible">
+                <div class="gallery-item event hidden">
                     <img src="assets/gallery/events/4.jpg" alt="Event Photography 4" loading="lazy">
                     <div class="gallery-overlay"></div>
                 </div>
-                <div class="gallery-item events visible">
+                <div class="gallery-item event hidden">
                     <img src="assets/gallery/events/5.jpg" alt="Event Photography 5" loading="lazy">
                     <div class="gallery-overlay"></div>
                 </div>
-                <div class="gallery-item events visible">
+                <div class="gallery-item event hidden">
                     <img src="assets/gallery/events/6.jpg" alt="Event Photography 6" loading="lazy">
                     <div class="gallery-overlay"></div>
                 </div>
                 
                 <!-- Event Images - Hidden initial images -->
-                <div class="gallery-item events hidden">
+                <div class="gallery-item event hidden">
                     <img src="assets/gallery/events/7.jpg" alt="Event Photography 7" loading="lazy">
                     <div class="gallery-overlay"></div>
                 </div>
-                <div class="gallery-item events hidden">
+                <div class="gallery-item event hidden">
                     <img src="assets/gallery/events/8.jpg" alt="Event Photography 8" loading="lazy">
                     <div class="gallery-overlay"></div>
                 </div>
-                <div class="gallery-item events hidden">
+                <div class="gallery-item event hidden">
                     <img src="assets/gallery/events/9.jpg" alt="Event Photography 9" loading="lazy">
                     <div class="gallery-overlay"></div>
                 </div>
-                <div class="gallery-item events hidden">
+                <div class="gallery-item event hidden">
                     <img src="assets/gallery/events/10.jpg" alt="Event Photography 10" loading="lazy">
                     <div class="gallery-overlay"></div>
                 </div>
-                <div class="gallery-item events hidden">
+                <div class="gallery-item event hidden">
                     <img src="assets/gallery/events/11.jpg" alt="Event Photography 11" loading="lazy">
                     <div class="gallery-overlay"></div>
                 </div>
-                <div class="gallery-item events hidden">
+                <div class="gallery-item event hidden">
                     <img src="assets/gallery/events/12.jpg" alt="Event Photography 12" loading="lazy">
                     <div class="gallery-overlay"></div>
                 </div>
-                <div class="gallery-item events hidden">
+                <div class="gallery-item event hidden">
                     <img src="assets/gallery/events/13.jpg" alt="Event Photography 13" loading="lazy">
                     <div class="gallery-overlay"></div>
                 </div>
-                <div class="gallery-item events hidden">
+                <div class="gallery-item event hidden">
                     <img src="assets/gallery/events/14.jpg" alt="Event Photography 14" loading="lazy">
                     <div class="gallery-overlay"></div>
                 </div>
-                <div class="gallery-item events hidden">
+                <div class="gallery-item event hidden">
                     <img src="assets/gallery/events/15.jpg" alt="Event Photography 15" loading="lazy">
                     <div class="gallery-overlay"></div>
                 </div>
 
                 <!-- Commercial Category - Initial 6 images -->
-                <div class="gallery-item commercial visible">
+                <div class="gallery-item commercial hidden">
                     <img src="assets/gallery/commercial/1.jpg" alt="Commercial Photography 1" loading="lazy">
                     <div class="gallery-overlay"></div>
                 </div>
-                <div class="gallery-item commercial visible">
+                <div class="gallery-item commercial hidden">
                     <img src="assets/gallery/commercial/2.jpg" alt="Commercial Photography 2" loading="lazy">
                     <div class="gallery-overlay"></div>
                 </div>
-                <div class="gallery-item commercial visible">
+                <div class="gallery-item commercial hidden">
                     <img src="assets/gallery/commercial/3.jpg" alt="Commercial Photography 3" loading="lazy">
                     <div class="gallery-overlay"></div>
                 </div>
-                <div class="gallery-item commercial visible">
+                <div class="gallery-item commercial hidden">
                     <img src="assets/gallery/commercial/4.jpg" alt="Commercial Photography 4" loading="lazy">
                     <div class="gallery-overlay"></div>
                 </div>
-                <div class="gallery-item commercial visible">
+                <div class="gallery-item commercial hidden">
                     <img src="assets/gallery/commercial/5.jpg" alt="Commercial Photography 5" loading="lazy">
                     <div class="gallery-overlay"></div>
                 </div>
-                <div class="gallery-item commercial visible">
+                <div class="gallery-item commercial hidden">
                     <img src="assets/gallery/commercial/6.jpg" alt="Commercial Photography 6" loading="lazy">
                     <div class="gallery-overlay"></div>
                 </div>
@@ -427,53 +429,90 @@
 
 
 
-    <!-- Footer -->
-    <footer class="footer">
+      <!-- Footer -->
+      <footer class="footer">
         <div class="container">
             <div class="footer-content">
                 <div class="footer-brand">
-                    <h3>Shubham Digital Studio</h3>
+                    <h3><a href="index.html#home" style="text-decoration: none; color: inherit;">Shubham Digital Studio</a></h3>
                     <p>Capturing moments that last forever</p>
                     <div class="social-links">
-                        <a href="https://www.instagram.com/shubham.digital.studio_207041/"><i class="fab fa-instagram"></i></a>
-                        <a href="#"><i class="fab fa-facebook"></i></a>
-                        <a href="#"><i class="fab fa-youtube"></i></a>
+                        <a href="https://www.instagram.com/shubham.digital.studio_207041/" target="_blank" class="insta-follow-btn">
+                            <i class="fab fa-instagram"></i> Follow on Instagram
+                        </a>
+                        <a href="https://www.youtube.com/@ShubhamDigitalMarehra" target="_blank" class="youtube-follow-btn">
+                            <i class="fab fa-youtube"></i> Subscribe on YouTube
+                        </a>
                     </div>
                 </div>
                 <div class="footer-links">
                     <h4>Quick Links</h4>
                     <ul>
-                        <li><a href="#home">Home</a></li>
-                        <li><a href="#about">About</a></li>
-                        <li><a href="#services">Services</a></li>
-                        <li><a href="#portfolio">Portfolio</a></li>
+                        <li><a href="index.html#home">Home</a></li>
+                        <li><a href="index.html#about">About</a></li>
+                        <li><a href="index.html#services">Services</a></li>
+                        <li><a href="index.html#portfolio">Portfolio</a></li>
                     </ul>
                 </div>
                 <div class="footer-links">
                     <h4>Services</h4>
                     <ul>
-                        <li><a href="#services">Wedding Photography</a></li>
-                        <li><a href="#services">Event Videography</a></li>
-                        <li><a href="#services">Portrait Sessions</a></li>
+                        <li><a href="#wedding-filter-btn">Wedding Photography</a></li>
+                        <li><a href="index.html#pre-wedding-video">Event Videography</a></li>
+                        <li><a href="#wedding-filter-btn">Portrait Sessions</a></li>
                     </ul>
                 </div>
                 <div class="footer-newsletter">
                     <h4>Newsletter</h4>
                     <p>Subscribe to our newsletter for updates and photography tips.</p>
-                    <form class="newsletter-form">
+                    <form class="newsletter-form" id="newsletterForm">
                         <input type="email" placeholder="Your Email">
                         <button type="submit">Subscribe</button>
                     </form>
                 </div>
             </div>
             <div class="footer-bottom">
-                <p>&copy; 2024 Shubham Digital Studio. All rights reserved.</p>
+                <div class="footer-copyright">
+                    <p>&copy; 2024 Shubham Digital Studio. All rights reserved.</p>
+                </div>
+                <div class="developer-credits">
+                    <p>Made with <i class="fas fa-heart"></i> by <a href="https://instagram.com/its.mrgagan" target="_blank">Gagan</a></p>
+                </div>
             </div>
         </div>
-    </footer>
+    </footer>    
+
 
     <!-- Scripts -->
     <script src="js/main.js"></script>
     <script src="js/gallery.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const navToggle = document.querySelector('.nav-toggle');
+            const navLinks = document.querySelector('.nav-links');
+
+            navToggle.addEventListener('click', function() {
+                navLinks.classList.toggle('active');
+                navToggle.classList.toggle('active');
+            });
+
+            // Close menu when clicking outside
+            document.addEventListener('click', function(event) {
+                if (!navToggle.contains(event.target) && !navLinks.contains(event.target)) {
+                    navLinks.classList.remove('active');
+                    navToggle.classList.remove('active');
+                }
+            });
+
+            // Close menu when clicking a link
+            const links = document.querySelectorAll('.nav-links a');
+            links.forEach(link => {
+                link.addEventListener('click', () => {
+                    navLinks.classList.remove('active');
+                    navToggle.classList.remove('active');
+                });
+            });
+        });
+    </script>
 </body>
 </html>
